@@ -22,6 +22,7 @@
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Search">
       <button class="btn btn-outline-light" type="submit">Search</button>
+      <a href="{{url_for('add_cat')}}" class="btn btn-primary">Add a cat</a>
     </form>
   </nav>
   <!--Navbar End-->
@@ -35,7 +36,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{cat.name}}</h5>
                   <p class="card-text">Votes: 0</p>
-                  <a href="cats/{{cat.id}}" class="btn btn-primary">View details</a>
+                  <a href="{{url_for('profile_page', name=cat.name)}}" class="btn btn-primary">View details</a>
                 </div>
               </div>
         </div>
