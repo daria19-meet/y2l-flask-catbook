@@ -25,9 +25,33 @@
       </form>
     </nav>
     <!--Navbar End-->
-    <h1>{{cat.name}}'s Profile</h1>
-    <p class="card-text">Votes: {{cat.votes}}</p>
-    <button type="button" class="btn btn-primary">Vote</button>
+    <div class="main-login main-center">
+      <form action="/add_cat" class="forms" method="POST" action="#" id="sign_form">
+          
+          <div class="form-group">
+              <label for="name" class="cols-sm-2 control-label">Cat Name</label>
+              <div class="cols-sm-4">
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="name" id="first_name"  placeholder="Enter your cat's name"/>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="form-group">
+              <label for="username" class="cols-sm-2 control-label">URL for cat's picture</label>
+              <div class="cols-sm-3">
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                      <input type="text" class="form-control" name="url_for_pic" id="username"  placeholder="Must be a URL"/>
+                  </div>
+              </div>
+          </div>
+          <input type="submit"  class="btn btn-primary" placeholder="Sign Up" id="signupsubmit">
+      </form>
+  </div>
+
     <!--BOOTSTRAP Javascript import-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

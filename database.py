@@ -8,8 +8,8 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def create_cat(name):
-    cat_object = Cat(name=name)
+def create_cat(name, vote, url):
+    cat_object = Cat(name=name, vote=vote, url=url)
     session.add(cat_object)
     session.commit()
 

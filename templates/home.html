@@ -32,10 +32,10 @@
       <div class="col-sm-4">
         <div class="card">
             <div class="card">
-                <img class="card-img-top" src="{{url_for('static', filename='images/cat1.jpg')}}">
+                <img class="card-img-top" src="{{cat.url}}">
                 <div class="card-body">
                   <h5 class="card-title">{{cat.name}}</h5>
-                  <p class="card-text">Votes: 0</p>
+                  <p class="card-text">Votes: {{cat.vote}}</p>
                   <a href="{{url_for('profile_page', name=cat.name)}}" class="btn btn-primary">View details</a>
                 </div>
               </div>
